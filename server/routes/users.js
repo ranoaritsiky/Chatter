@@ -4,7 +4,6 @@ var express = require('express');
 var router = express.Router();
 
 const getUserByEmail = async (email) => {
-  console.log(email)
   return await prisma.user.findUnique({
     where: {
       email: email,
